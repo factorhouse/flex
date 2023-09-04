@@ -1,6 +1,3 @@
-[![Release to DockerHub](https://github.com/operatr-io/kpow/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/operatr-io/kpow/actions/workflows/release.yml)
-[![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kpow)](https://artifacthub.io/packages/search?repo=kpow)
-
 # Flex for Apache Flink
 
 [Flex](https://factorhouse.io/flex) - The Ultimate Engineering Toolkit for [Apache Flink®](http://flink.apache.org/)
@@ -29,6 +26,10 @@ The free version of Flex can be found here:
 ```
 docker pull factorhouse/flex-ce:91.5.1
 ```
+
+## Enterprise Edition
+
+Flex's enterprise edition is coming shorty! Sign up to our [mailing list](factorhouse.io/newsletter) to stay up to date.
 
 # Documentation
 
