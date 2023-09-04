@@ -29,3 +29,15 @@ The free version of Flex can be found here:
 ```
 docker pull factorhouse/flex-ce:91.5.1
 ```
+
+# Documentation
+
+Flex's documentation is available at [https://factorhouse.io/flex/docs](https://factorhouse.io/flex/docs)
+
+# License
+
+Flex is proprietary software.
+
+Flex's EULA can be found in the [GitHub repository](https://github.com/factorhouse/flex/blob/main/resources/eula.txt) or at https://factorhouse.io/flex/eula/
+
+This repository is licensed under the Eclipse Public License 1.0 (EPL-1.0)
