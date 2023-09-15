@@ -2,7 +2,7 @@
 
 [Flex](https://factorhouse.io/flex) - The Ultimate Engineering Toolkit for [Apache Flink®](http://flink.apache.org/)
 
-See the [Changelog](CHANGELOG.md) for release information or [our blog](https://kpow.io/category/releases/) for full notes on each release and JAR artefacts.
+See the [Changelog](CHANGELOG.md) for release information or [our blog](https://factorhouse.io/blog/releases/) for full notes on each release and JAR artefacts.
 
 Flex is an Enterprise-grade toolkit for engineers working with Apache Flink that:
 
@@ -27,13 +27,17 @@ The free version of Flex can be found here:
 docker pull factorhouse/flex-ce:91.5.1
 ```
 
-## Enterprise Edition
+## Standard and Enterprise Edition
 
-Flex's enterprise edition is coming shorty! Sign up to our [mailing list](factorhouse.io/newsletter) to stay up to date.
+Paying customers using the Standard or Enterprise Edition can use the following Docker image:
+
+```
+docker pull factorhouse/flex-ee:92.1
+```
 
 # Documentation
 
-Flex's documentation is available at [https://factorhouse.io/flex/docs](https://factorhouse.io/flex/docs)
+Flex's documentation is available at [https://factorhouse.io/flex/docs](https://docs.factorhouse.io/flex)
 
 # License
 
