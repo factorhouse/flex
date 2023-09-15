@@ -50,8 +50,8 @@ jobs:
           docker buildx build -f ./dockerfile/flex-ce/Dockerfile --platform=linux/amd64,linux/arm64 -t factorhouse/flex-ce:$NEXT_RELEASE --push .
       - name: Install babashka
         run: sudo bash < <(curl -s https://raw.githubusercontent.com/babashka/babashka/master/install)
-#      - name: Update releases-flex-ce.edn
-#        run: ./scripts/release.clj ${{github.event.inputs.version}} releases-flex-ce.edn
+      - name: Update releases-flex-ce.edn
+        run: ./scripts/release.clj ${{github.event.inputs.version}} releases-flex-ce.edn
       - name: Commit
         run: |
           git config --global user.email "support@operatr.io"
