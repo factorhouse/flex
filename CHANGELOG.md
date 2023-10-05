@@ -4,6 +4,19 @@
 
 Get started with the [Community Edition](https://factorhouse.io/flex/get-started) of Flex today.
 
+## Changelog Location Update
+
+**Please Note!** This Changelog has moved to [https://factorhouse.io/flex/changelog](https://factorhouse.io/flex/changelog)
+
+You may also be interested in the Flex for Apache Flink Changelog and Factor House Product Roadmap:
+
+* Kpow for Apache Kafka Changelog: [https://factorhouse.io/kpow/changelog](https://factorhouse.io/flex/changelog)
+* Factor House Product Roadmap:[https://factorhouse.io/roadmap](https://factorhouse.io/roadmap)
+
+# Remainder Left In Place for Archive Purposes Only
+
+**This changelog will no longer be updated, see the links above for the new Kpow changelog location.**
+
 ## Latest Release Artifacts
 
 The latest release of Flex is [vX.X](https://factorhouse.io/flex/releases/X)
