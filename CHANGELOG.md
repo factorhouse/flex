@@ -10,7 +10,7 @@ Get started with the [Community Edition](https://factorhouse.io/flex/get-started
 
 You may also be interested in the Flex for Apache Flink Changelog and Factor House Product Roadmap:
 
-* Kpow for Apache Kafka Changelog: [https://factorhouse.io/kpow/changelog](https://factorhouse.io/flex/changelog)
+* Kpow for Apache Kafka Changelog: [https://factorhouse.io/kpow/changelog](https://factorhouse.io/kpow/changelog)
 * Factor House Product Roadmap:[https://factorhouse.io/roadmap](https://factorhouse.io/roadmap)
 
 # Remainder Left In Place for Archive Purposes Only
