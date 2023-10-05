@@ -24,7 +24,7 @@ Visit our [Get Started](https://factorhouse.io/flex/get-started) page to learn m
 The free version of Flex can be found here:
 
 ```
-docker pull factorhouse/flex-ce:91.5.1
+docker pull factorhouse/flex-ce:92.1.1
 ```
 
 ## Standard and Enterprise Edition
