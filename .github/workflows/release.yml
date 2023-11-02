@@ -81,10 +81,10 @@ jobs:
         run: sudo bash < <(curl -s https://raw.githubusercontent.com/babashka/babashka/master/install)
       - name: Update releases-flex-ee.edn
         run: ./scripts/release.clj ${{github.event.inputs.version}} releases-flex-ee.edn
-#      - name: Update dockerhub/flex-ee/README.md
-#        run: echo ${{github.event.inputs.version}} | ./scripts/dockerhub_readme_ee.clj
-#      - name: Update dockerhub/flex-se/README.md
-#        run: echo ${{github.event.inputs.version}} | ./scripts/dockerhub_readme_se.clj
+      - name: Update dockerhub/flex-ee/README.md
+        run: echo ${{github.event.inputs.version}} | ./scripts/dockerhub_readme_ee.clj
+      - name: Update dockerhub/flex-se/README.md
+        run: echo ${{github.event.inputs.version}} | ./scripts/dockerhub_readme_se.clj
       - name: Commit
         run: |
           git config --global user.email "support@operatr.io"
