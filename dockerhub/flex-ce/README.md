@@ -5,6 +5,7 @@ Dockerfile for the community edition of [Flex](https://factorhouse.io/flex) - Ac
 **Note**: This repository is for the [Enterprise Edition](https://factorhouse.io/flex/pricing) of Flex.
 
 *  The Enterprise Edition DockerHub repository can be found at [factorhouse/flex-ee](https://hub.docker.com/r/factorhouse/flex-ee)
+*  The Standard Edition DockerHub repository can be found at [factorhouse/flex-se](https://hub.docker.com/r/factorhouse/flex-se)
 
 View [Features](https://factorhouse.io/flex/features) to compare editions.
 
