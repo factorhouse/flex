@@ -52,6 +52,8 @@ jobs:
         run: sudo bash < <(curl -s https://raw.githubusercontent.com/babashka/babashka/master/install)
       - name: Update releases-flex-ce.edn
         run: ./scripts/release.clj ${{github.event.inputs.version}} releases-flex-ce.edn
+      - name: Update dockerhub/flex-ce/README.md
+        run: echo ${{github.event.inputs.version}} | ./scripts/dockerhub_readme_ce.clj
       - name: Commit
         run: |
           git config --global user.email "support@operatr.io"
