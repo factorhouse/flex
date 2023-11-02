@@ -3,7 +3,7 @@ FROM amazoncorretto:17.0.7
 ARG VERSION
 ARG RELEASE
 
-LABEL name="Flex for Apache Kafka" \
+LABEL name="Flex for Apache Flink" \
       maintainer="support@factorhouse.io" \
       vendor="Factor House" \
       version=$VERSION \
