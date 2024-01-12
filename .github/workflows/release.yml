@@ -14,6 +14,11 @@ on:
         required: true
         default: 'false'
 
+# These permissions are needed to interact with GitHub's OIDC Token endpoint.
+permissions:
+  id-token: write
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -36,6 +41,33 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_TOKEN }}
+
+      - name: Configure AWS Credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: us-east-1
+
+      - name: Release Flex JDK11 JAR
+        run: | 
+          VERSION=${{github.event.inputs.version}}
+          VERSION="${VERSION//./-}"
+          aws s3 cp target/flex-java11-standalone.jar s3://${{ secrets.RELEASES_BUCKET }}/flex-$VERSION-java11.jar
+
+      - name: Release Flex JDK8 JAR
+        run: | 
+          VERSION=${{github.event.inputs.version}}
+          VERSION="${VERSION//./-}"
+          aws s3 cp target/flex-java8-standalone.jar s3://${{ secrets.RELEASES_BUCKET }}/flex-$VERSION-java8.jar
+
+      - name: Release Dependency Check Report
+        run: |
+          VERSION=${{github.event.inputs.version}}
+          VERSION="${VERSION//./-}"
+          tar xzf flex-enterprise-nvd-report.tar.gz
+          cd flex-enterprise-nvd-report
+          mv *.html index.html
+          aws s3 cp index.html s3://${{ secrets.RELEASES_BUCKET }}/flex-dependency-check-report-$VERSION.html
 
       - name: Log into GitHub packages
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
@@ -85,6 +117,8 @@ jobs:
         run: echo ${{github.event.inputs.version}} | ./scripts/dockerhub_readme_ee.clj
       - name: Update dockerhub/flex-se/README.md
         run: echo ${{github.event.inputs.version}} | ./scripts/dockerhub_readme_se.clj
+      - name: Deploy Manifest to s3
+        run: aws s3 cp docs/releases-flex-ee.edn s3://${{ secrets.RELEASES_BUCKET }}/releases-flex-ee.edn        
       - name: Commit
         run: |
           git config --global user.email "support@operatr.io"
