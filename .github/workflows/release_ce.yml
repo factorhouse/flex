@@ -13,6 +13,11 @@ on:
         required: true
         default: 'false'
 
+# These permissions are needed to interact with GitHub's OIDC Token endpoint.
+permissions:
+  id-token: write
+  contents: write
+
 jobs:
   TagAndUpdateReleasesEdn:
     runs-on: ubuntu-latest
@@ -34,6 +39,12 @@ jobs:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_TOKEN }}
 
+      - name: Configure AWS Credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: us-east-1
+
       -
         # Add support for more platforms with QEMU (optional)
         # https://github.com/docker/setup-qemu-action
@@ -54,6 +65,8 @@ jobs:
         run: ./scripts/release.clj ${{github.event.inputs.version}} releases-flex-ce.edn
       - name: Update dockerhub/flex-ce/README.md
         run: echo ${{github.event.inputs.version}} | ./scripts/dockerhub_readme_ce.clj
+      - name: Deploy Manifest to s3
+        run: aws s3 cp docs/releases-flex-ce.edn s3://${{ secrets.RELEASES_BUCKET }}/releases-flex-ce.edn        
       - name: Commit
         run: |
           git config --global user.email "support@operatr.io"
