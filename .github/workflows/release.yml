@@ -119,8 +119,7 @@ jobs:
         run: echo ${{github.event.inputs.version}} | ./scripts/dockerhub_readme_se.clj
       - name: Deploy Manifest to s3
         run: |
-          aws s3 cp docs/releases-flex-ee.edn s3://${{ secrets.RELEASES_BUCKET }}/releases-flex-ee.edn \
-          --cache-control no-cache --content-type application/edn
+          aws s3 cp docs/releases-flex-ee.edn s3://${{ secrets.RELEASES_BUCKET }}/releases-flex-ee.edn --cache-control no-cache --content-type application/edn
       - name: Commit
         run: |
           git config --global user.email "support@operatr.io"
