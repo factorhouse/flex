@@ -49,13 +49,13 @@ jobs:
           aws-region: us-east-1
 
       - name: Release Flex JDK11 JAR
-        run: | 
+        run: |
           VERSION=${{github.event.inputs.version}}
           VERSION="${VERSION//./-}"
           aws s3 cp target/flex-java11-standalone.jar s3://${{ secrets.RELEASES_BUCKET }}/flex-$VERSION-java11.jar
 
       - name: Release Flex JDK8 JAR
-        run: | 
+        run: |
           VERSION=${{github.event.inputs.version}}
           VERSION="${VERSION//./-}"
           aws s3 cp target/flex-java8-standalone.jar s3://${{ secrets.RELEASES_BUCKET }}/flex-$VERSION-java8.jar
@@ -118,7 +118,9 @@ jobs:
       - name: Update dockerhub/flex-se/README.md
         run: echo ${{github.event.inputs.version}} | ./scripts/dockerhub_readme_se.clj
       - name: Deploy Manifest to s3
-        run: aws s3 cp docs/releases-flex-ee.edn s3://${{ secrets.RELEASES_BUCKET }}/releases-flex-ee.edn        
+        run: |
+          aws s3 cp docs/releases-flex-ee.edn s3://${{ secrets.RELEASES_BUCKET }}/releases-flex-ee.edn \
+          --cache-control no-cache --content-type application/edn
       - name: Commit
         run: |
           git config --global user.email "support@operatr.io"
