@@ -1,8 +1,8 @@
 [![Release to DockerHub](https://github.com/factorhouse/flex/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/factorhouse/flex/actions/workflows/release.yml)
 
-Dockerfile for the enterprise edition of [Flex](https://factorhouse.io/flex) - Accelerate with Flex for [Apache Flink®](https://flink.apache.org/)
+Dockerfile for the standard edition of [Flex](https://factorhouse.io/flex) - Accelerate with Flex for [Apache Flink®](https://flink.apache.org/)
 
-**Note**: This repository is for the [Enterprise Edition](https://factorhouse.io/flex/pricing) of Flex.
+**Note**: This repository is for the [Standard Edition](https://factorhouse.io/flex/pricing) of Flex.
 
 *  The Community Edition DockerHub repository can be found at [factorhouse/flex-ce](https://hub.docker.com/r/factorhouse/flex-ce)
 *  The Enterprise Edition DockerHub repository can be found at [factorhouse/flex-ee](https://hub.docker.com/r/factorhouse/flex-ee)
@@ -12,7 +12,7 @@ View [Features](https://factorhouse.io/flex/features) to compare editions.
 # Quick reference
 
 * **Maintained by**: [the Factor House team](https://factorhouse.io)
-* **Where to get help**: [GitHub](https://github.com/factorhouse/flex), [Flex documentation](http://docs.factorhouse.io/flex-ee/), [Support Hub](https://factorhouse.io/support)
+* **Where to get help**: [GitHub](https://github.com/factorhouse/flex), [Flex documentation](http://docs.factorhouse.io/flex-se/), [Support Hub](https://factorhouse.io/support)
 
 # Supported tags respective `Dockerfile` links
 
