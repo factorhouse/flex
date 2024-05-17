@@ -122,7 +122,7 @@ jobs:
           aws s3 cp docs/releases-flex-ee.edn s3://${{ secrets.RELEASES_BUCKET }}/releases-flex-ee.edn --cache-control no-cache --content-type application/edn
       - name: Commit
         run: |
-          git config --global user.email "support@operatr.io"
+          git config --global user.email "support@factorhouse.io"
           git config --global user.name "Flex CI"
           git commit -am "Release Enterprise ${{github.event.inputs.version}}"
       - name: Tag
