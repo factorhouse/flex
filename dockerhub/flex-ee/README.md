@@ -18,7 +18,7 @@ View [Features](https://factorhouse.io/flex/features) to compare editions.
 
 <!--- StartReleaseLinks --->
 
-* [93.2, latest](https://github.com/factorhouse/flex/blob/main/dockerfile/flex/Dockerfile)
+* [93.3, latest](https://github.com/factorhouse/flex/blob/main/dockerfile/flex/Dockerfile)
 
 <!--- EndReleaseLinks --->
 
