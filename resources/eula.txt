@@ -4,13 +4,13 @@ In this Agreement, 'us' 'we' or 'our' means Operatr Pty Ltd ACN 635 807 251 and 
 Documentation means the user guides and manuals for Software provided by us to you to assist your use of our Products.
 Order Form means an online shopping cart or any subsequent order form for additional Products or services that have been accepted by us.
 License Certificate means the evidence provided to you by us of your license to use our Products.
-Cluster Credits means the total number of Apache Kafka clusters permitted for concurrent use with our Products by your Licence Certificate.
+Cluster Credits means the total number of Apache Flink clusters permitted for concurrent use with our Products by your Licence Certificate.
 Products mean the Software and other services provided by us under this Agreement.
-Software means Operatr, the tool that helps your team deliver and monitor applications built with Apache Kafka.
+Software means Operatr, the tool that helps your team deliver and monitor applications built with Apache Flink.
 You means the individual or organisation identified as the Licensee by a License Certificate.
 2. PRODUCTS AND LICENSE
 2.1 License Certificate
-A License Certificate allows you to use our Products with as many concurrent Apache Kafka clusters as described within the License Certificate as Cluster Credits for the License Term.
+A License Certificate allows you to use our Products with as many concurrent Apache Flink clusters as described within the License Certificate as Cluster Credits for the License Term.
 
 Where we issue you a License Certificate, we grant you a revocable, non-exclusive, non-transferable, non-sublicensable license to install and use the Software for your internal business purposes, which includes the internal business purposes of any subsidiaries that you control either directly or indirectly.
 
