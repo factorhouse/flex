@@ -41,8 +41,8 @@ Flex's documentation is available at [https://docs.factorhouse.io/flex-ee/](http
 
 # License
 
-Flex is proprietary software.
+Flex is proprietary software. Flex's EULA can be found [here](https://github.com/factorhouse/flex/blob/main/resources/eula.txt) or at [https://factorhouse.io/flex/eula/](https://factorhouse.io/flex/eula/)
 
-Flex's EULA can be found in the [GitHub repository](https://github.com/factorhouse/flex/blob/main/resources/eula.txt) or at [https://factorhouse.io/flex/eula/](https://factorhouse.io/flex/eula/)
+This repository distributed under the Apache 2.0 License.
 
-This repository is licensed under the Eclipse Public License 1.0 (EPL-1.0)
+Copyright (c) [Factor House](https://factorhouse.io)
