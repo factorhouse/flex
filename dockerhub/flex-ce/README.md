@@ -2,10 +2,9 @@
 
 Dockerfile for the community edition of [Flex](https://factorhouse.io/flex) - Accelerate with Flex for [Apache Flink®](https://flink.apache.org/)
 
-**Note**: This repository is for the [Enterprise Edition](https://factorhouse.io/flex/pricing) of Flex.
+**Note**: This repository is for the [Community Edition](https://factorhouse.io/flex/pricing) of Flex.
 
-*  The Enterprise Edition DockerHub repository can be found at [factorhouse/flex-ee](https://hub.docker.com/r/factorhouse/flex-ee)
-*  The Standard Edition DockerHub repository can be found at [factorhouse/flex-se](https://hub.docker.com/r/factorhouse/flex-se)
+*  The Enterprise Edition DockerHub repository can be found at [factorhouse/flex](https://hub.docker.com/r/factorhouse/flex)
 
 View [Features](https://factorhouse.io/flex/features) to compare editions.
 

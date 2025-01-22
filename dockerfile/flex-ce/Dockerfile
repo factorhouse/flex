@@ -13,7 +13,7 @@ LABEL name="Flex for Apache Flink" \
       description="Flex features a rich data-oriented UI, specialized dashboards that deliver instant visibility into Flink Clusters, and developer tools that allow engineers to get to the heart of their systems quickly."
 
 ADD --chmod=044 resources/eula.txt /licenses/eula.txt
-ADD --chmod=044 target/flex-ce-standalone.jar /opt/flex/lib/flex.jar
+ADD --chmod=044 target/flex-ce-standalone.jar /opt/factorhouse/lib/flex.jar
 
 RUN mkdir -p /opt/flex/config
 ENV CORE_ASYNC_POOL_SIZE=8
@@ -22,4 +22,4 @@ ENV JVM_OPTS="-server -Dclojure.core.async.pool-size=$CORE_ASYNC_POOL_SIZE -XX:M
 
 EXPOSE 3000
 
-CMD java $JVM_OPTS -jar /opt/flex/lib/flex.jar
+CMD java $JVM_OPTS -jar /opt/factorhouse/lib/flex.jar

@@ -13,7 +13,7 @@ Flex is an Enterprise-grade toolkit for engineers working with Apache Flink that
 * Has a simple, transparent pricing structure
 * Is built and supported by an engineering-lead team deeply experienced in Flink delivery
 
-The Flex image is available directly from [Docker Hub](https://hub.docker.com/r/factorhouse/flex-ee). Images are built using [GitHub Actions](https://github.com/factorhouse/flex/actions/workflows/build.yml).
+The Flex image is available directly from [Docker Hub](https://hub.docker.com/r/factorhouse/flex). Images are built using [GitHub Actions](https://github.com/factorhouse/flex/actions/workflows/build.yml).
 
 # Usage
 
@@ -24,15 +24,15 @@ Visit our [Get Started](https://factorhouse.io/flex/get-started) page to learn m
 The free version of Flex can be found here:
 
 ```
-docker pull factorhouse/flex-ce:93.4
+docker pull factorhouse/flex-ce:94.1
 ```
 
-## Standard and Enterprise Edition
+## Enterprise Edition
 
-Paying customers using the Standard or Enterprise Edition can use the following Docker image:
+Paying customers using the Enterprise Edition can use the following Docker image:
 
 ```
-docker pull factorhouse/flex-ee:93.4
+docker pull factorhouse/flex:94.1
 ```
 
 # Documentation

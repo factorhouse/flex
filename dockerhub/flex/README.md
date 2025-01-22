@@ -5,7 +5,6 @@ Dockerfile for the enterprise edition of [Flex](https://factorhouse.io/flex) - A
 **Note**: This repository is for the [Enterprise Edition](https://factorhouse.io/flex/pricing) of Flex.
 
 *  The Community Edition DockerHub repository can be found at [factorhouse/flex-ce](https://hub.docker.com/r/factorhouse/flex-ce)
-*  The Standard Edition DockerHub repository can be found at [factorhouse/flex-se](https://hub.docker.com/r/factorhouse/flex-se)
 
 View [Features](https://factorhouse.io/flex/features) to compare editions.
 
@@ -27,7 +26,7 @@ View [Features](https://factorhouse.io/flex/features) to compare editions.
 * **Where to file issues:** https://github.com/factorhouse/flex/issues
 * **Published image artifact details:** [GitHub actions CI](https://github.com/factorhouse/flex/actions/workflows/build.yml)
 * **Image updates**: https://github.com/factorhouse/flex/tags
-* **Source of this description**: [dockerhub/flex-ee/README.md](https://github.com/factorhouse/flex/blob/main/dockerhub/flex-ee/README.md)
+* **Source of this description**: [dockerhub/flex/README.md](https://github.com/factorhouse/flex/blob/main/dockerhub/flex/README.md)
 
 # What is Flex?
 
