@@ -1,6 +1,6 @@
 #!/usr/bin/env bb
 
-(def readme (slurp "dockerhub/flex-ee/README.md"))
+(def readme (slurp "dockerhub/flex/README.md"))
 (def readme-lines (str/split-lines readme))
 (def release-number *input*)
 
@@ -35,4 +35,4 @@
 
 (def next-readme (str/join "\n" (:next-lines next-readme-lines)))
 
-(spit "dockerhub/flex-ee/README.md" next-readme)
+(spit "dockerhub/flex/README.md" next-readme)
