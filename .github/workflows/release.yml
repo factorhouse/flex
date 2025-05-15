@@ -101,24 +101,39 @@ jobs:
           IMAGE_TAG=latest
           ./scripts/build_all.sh $VERSION $IMAGE_ID $IMAGE_TAG dockerfile/flex/Dockerfile
 
+      - name: Build Flex (Community)
+        run: |
+          NEXT_RELEASE=${{github.event.inputs.version}}
+          docker buildx build -f ./dockerfile/flex-ce/Dockerfile --platform=linux/amd64,linux/arm64 --sbom=true --provenance=true -t factorhouse/flex-ce:latest --push .
+          docker buildx build -f ./dockerfile/flex-ce/Dockerfile --platform=linux/amd64,linux/arm64 --sbom=true --provenance=true -t factorhouse/flex-ce:$NEXT_RELEASE --push .
+
       - name: Install babashka
         run: sudo bash < <(curl -s https://raw.githubusercontent.com/babashka/babashka/master/install)
       - name: Update releases-flex-ee.edn
         run: ./scripts/release.clj ${{github.event.inputs.version}} releases-flex-ee.edn
       - name: Update dockerhub/flex/README.md
         run: echo ${{github.event.inputs.version}} | ./scripts/dockerhub_readme_flex.clj
+      - name: Update releases-flex-ce.edn
+        run: ./scripts/release.clj ${{github.event.inputs.version}} releases-flex-ce.edn
+      - name: Update dockerhub/flex-ce/README.md
+        run: echo ${{github.event.inputs.version}} | ./scripts/dockerhub_readme_ce.clj
+      - name: Deploy Manifest to s3 (community)
+        run:
+          aws s3 cp docs/releases-flex-ce.edn s3://${{ secrets.RELEASES_BUCKET }}/releases-flex-ce.edn --cache-control no-cache --content-type application/edn
       - name: Deploy Manifest to s3
         run: |
           aws s3 cp docs/releases-flex-ee.edn s3://${{ secrets.RELEASES_BUCKET }}/releases-flex-ee.edn --cache-control no-cache --content-type application/edn
-      - name: Commit
+      - name: Commit and push
         run: |
-          git config --global user.email "support@factorhouse.io"
-          git config --global user.name "Flex CI"
-          git commit -am "Release Enterprise ${{github.event.inputs.version}}"
-      - name: Tag
-        run: git tag -a ee/${{github.event.inputs.version}} -m "Release Enterprise ${{github.event.inputs.version}}"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Release ${{github.event.inputs.version}}"
+          git push origin main
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          tag_name: ${{github.event.inputs.version}}
+          name: ${{github.event.inputs.version}}
+          body: "Visit https://factorhouse.io/blog/releases/ for release details"
+          draft: false
+          prerelease: false
