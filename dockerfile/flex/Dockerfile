@@ -19,14 +19,14 @@ RUN yum install shadow-utils -y
 
 RUN mkdir -p /opt/factorhouse
 
-RUN groupadd -g 1001 kpow && \
-    useradd -r -u 1001 -g kpow kpow
+RUN groupadd -g 1001 factorhouse && \
+    useradd -r -u 1001 -g factorhouse factorhouse
 
-RUN chown -R kpow:kpow /opt/factorhouse
+RUN chown -R factorhouse:factorhouse /opt/factorhouse
 
 RUN yum remove shadow-utils -y
 
-USER kpow
+USER factorhouse
 
 ENV CORE_ASYNC_POOL_SIZE=8
 ENV JVM_OPTS="-server -Dclojure.core.async.pool-size=$CORE_ASYNC_POOL_SIZE -XX:MaxInlineLevel=15 -Djava.awt.headless=true -XX:InitialRAMPercentage=70 -XX:MaxRAMPercentage=70 --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.jaxp=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.util=ALL-UNNAMED"
