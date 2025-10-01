@@ -28,9 +28,8 @@ RUN yum remove shadow-utils -y
 
 USER factorhouse
 
-ENV CORE_ASYNC_POOL_SIZE=8
 ENV CONFIG_DIR=/opt/factorhouse/config/flex
-ENV JVM_OPTS="-server -Dclojure.core.async.pool-size=$CORE_ASYNC_POOL_SIZE -XX:MaxInlineLevel=15 -Djava.awt.headless=true -XX:InitialRAMPercentage=70 -XX:MaxRAMPercentage=70"
+ENV JVM_OPTS="-server -XX:MaxInlineLevel=15 -Djava.awt.headless=true -XX:InitialRAMPercentage=70 -XX:MaxRAMPercentage=70"
 
 EXPOSE 3000
 
