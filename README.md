@@ -1,6 +1,10 @@
+<img width="120" height="120" alt="Frame 2085665428" src="https://github.com/user-attachments/assets/0cdf8a9a-cb97-41f8-9c23-37952ac25653" /><br />
+
 # Flex for Apache Flink
 
 [Flex](https://factorhouse.io/flex) - The Ultimate Engineering Toolkit for [Apache Flink®](http://flink.apache.org/)
+
+<img width="1712" height="1042" alt="screenshot-with-background (5)" src="https://github.com/user-attachments/assets/d846910f-8a83-4db4-8b32-c50fde9316d1" />
 
 See the [Changelog](https://factorhouse.io/flex/changelog) for release information or [our blog](https://factorhouse.io/blog/releases/) for full notes on each release and JAR artefacts.
 
