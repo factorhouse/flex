@@ -28,7 +28,7 @@ Visit our [Get Started](https://factorhouse.io/flex/get-started) page to learn m
 The free version of Flex can be found here:
 
 ```
-docker pull factorhouse/flex-ce:95.1
+docker pull factorhouse/flex-ce:95.2
 ```
 
 ## Enterprise Edition
@@ -36,7 +36,7 @@ docker pull factorhouse/flex-ce:95.1
 Paying customers using the Enterprise Edition can use the following Docker image:
 
 ```
-docker pull factorhouse/flex:95.1
+docker pull factorhouse/flex:95.2
 ```
 
 # Documentation
