@@ -10,4 +10,8 @@ updates:
       - dependency-name: "eclipse-temurin"
         update-types: ["version-update:semver-major"]
     schedule:
-      interval: "weekly"
+      interval: "daily"
+    reviewers:
+      - "ceels"
+      - "nvenegas"
+      - "ShanelleFactorHouse"
