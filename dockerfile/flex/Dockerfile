@@ -1,4 +1,4 @@
-FROM amazoncorretto:17.0.18
+FROM amazoncorretto:25.0.3
 
 ARG VERSION
 ARG RELEASE
@@ -12,7 +12,7 @@ LABEL name="Flex for Apache Flink" \
       description="Flex features a rich data-oriented UI, specialized dashboards that deliver instant visibility into Flink Clusters, and developer tools that allow engineers to get to the heart of their systems quickly."
 
 COPY resources/eula.txt /licenses/eula.txt
-COPY target/flex-java17-standalone.jar /opt/factorhouse/lib/flex.jar
+COPY target/flex-java25-standalone.jar /opt/factorhouse/lib/flex.jar
 COPY resources/entrypoint.sh /usr/local/bin/flex.sh
 
 RUN yum install shadow-utils -y
