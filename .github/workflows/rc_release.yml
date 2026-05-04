@@ -37,28 +37,18 @@ jobs:
       - name: Download and verify JAR(s)
         run: |
           ./scripts/jar.sh "${{github.event.inputs.manifest}}"
-      - name: Release Flex JDK11 JAR
+      - name: Release Flex JDK25 JAR
         run: |
           VERSION=${{github.event.inputs.version}}
           VERSION="${VERSION//./-}"
-          aws s3 cp target/flex-java11-standalone.jar s3://${{ secrets.RELEASES_BUCKET }}/flex-$VERSION-java11.jar
-      - name: Release Flex JDK8 JAR
-        run: |
-          VERSION=${{github.event.inputs.version}}
-          VERSION="${VERSION//./-}"
-          aws s3 cp target/flex-java8-standalone.jar s3://${{ secrets.RELEASES_BUCKET }}/flex-$VERSION-java8.jar
-      - name: Release Flex JDK17 JAR
-        run: |
-          VERSION=${{github.event.inputs.version}}
-          VERSION="${VERSION//./-}"
-          aws s3 cp target/flex-java17-standalone.jar s3://${{ secrets.RELEASES_BUCKET }}/flex-$VERSION-java17.jar
-      -
-        # Add support for more platforms with QEMU (optional)
-        # https://github.com/docker/setup-qemu-action
-        name: Set up QEMU
+          aws s3 cp target/flex-java25-standalone.jar s3://${{ secrets.RELEASES_BUCKET }}/flex-$VERSION-java25.jar
+
+      # Add support for more platforms with QEMU (optional)
+      # https://github.com/docker/setup-qemu-action
+      - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
-      -
-        name: Set up Docker Buildx
+
+      - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Build Flex
         run: |
