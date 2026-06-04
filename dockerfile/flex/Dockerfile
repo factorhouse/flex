@@ -28,7 +28,7 @@ RUN yum remove shadow-utils -y
 
 USER factorhouse
 
-ENV JVM_OPTS="-server -XX:MaxInlineLevel=15 -Djava.awt.headless=true -XX:InitialRAMPercentage=70 -XX:MaxRAMPercentage=70"
+ENV JVM_OPTS="-server -XX:MaxInlineLevel=15 -Djava.awt.headless=true -XX:InitialRAMPercentage=70 -XX:MaxRAMPercentage=70 --sun-misc-unsafe-memory-access=allow -XX:+UseCompactObjectHeaders -XX:+UseStringDeduplication"
 
 EXPOSE 3000
 
